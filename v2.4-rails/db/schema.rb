@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2021_12_20_170247) do
+ActiveRecord::Schema[7.2].define(version: 2021_12_20_170247) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "visitors", id: :string, force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -20,7 +23,6 @@ ActiveRecord::Schema[7.1].define(version: 2021_12_20_170247) do
     t.datetime "visited_at", precision: nil, null: false
     t.string "visitor_id", null: false
     t.string "page_path", null: false
-    t.index ["visited_at"], name: "index_visits_on_visited_at_DESC"
+    t.index ["visited_at"], name: "index_visits_on_visited_at_DESC", order: :desc
   end
-
 end

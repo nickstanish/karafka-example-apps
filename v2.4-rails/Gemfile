@@ -2,11 +2,20 @@
 
 source 'https://rubygems.org'
 
-gem 'karafka'
-gem 'karafka-web'
-gem 'puma'
-gem 'rails', '~> 7.1'
+gem 'karafka', '2.4.14'
+gem 'karafka-core', '2.4.7'
+gem 'karafka-web', '0.10.4'
+gem 'karafka-rdkafka', '0.18.1'
+gem 'puma', '6.4.3'
+gem 'rails', '~> 7.2.1'
 gem 'sqlite3', '2.4.0'
+gem "pg", "1.5.9"
+gem 'ddtrace', '1.23.3'
+gem 'typhoeus', '1.4.1'
+gem 'ethon', '0.16.0'
+gem 'libdatadog', '7.0.0.1.0'
+gem 'libddwaf', '1.14.0.0.0'
+gem 'ruby-vips', '2.2.2'
 
 group :development, :test do
   gem 'karafka-testing'
